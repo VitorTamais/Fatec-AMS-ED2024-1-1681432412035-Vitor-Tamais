@@ -1,156 +1,152 @@
-# Sistema de Gerenciamento de Pedidos
+**Sistema de Gerenciamento de Pedidos (Versão Recursiva)**
 
-## Componentes da Equipe
+**Componentes da Equipe**
 - Rafael Willian Galindo Neto
-- [Murilo Grillo Bastos]
-- [Vitor Tamais Fischer]
-- [Giovanni Montteiro]
+- Murilo Grillo Bastos
+- Vitor Tamais Fischer
+- Giovanni Montteiro
 
-## Descrição de Negócio
-O Sistema de Gerenciamento de Pedidos foi desenvolvido para otimizar o atendimento ao cliente em um ambiente de restaurante. A proposta é permitir que os operadores do restaurante gerenciem pedidos de forma eficiente, garantindo a verificação do estoque e o cálculo do tempo de preparo dos itens do menu. O sistema é interativo e permite a entrada de dados em tempo real, proporcionando uma experiência fluida tanto para os operadores quanto para os clientes.
+**Descrição de Negócio**
+O sistema de gerenciamento de pedidos foi desenvolvido para otimizar o atendimento ao cliente em restaurantes. Ele permite que os operadores gerenciem os pedidos de forma eficiente, garantindo que os itens estejam disponíveis em estoque e calculando o tempo total de preparo de forma precisa. O sistema opera em tempo real, proporcionando uma interação contínua e eficiente.
 
+**Problema Proposto / Solução Proposta**
+O principal problema abordado pelo sistema é a gestão ineficiente de pedidos e de estoque nos restaurantes. A solução proposta automatiza o processamento de pedidos e monitora o estoque em tempo real, garantindo um atendimento rápido e eficiente. Além disso, o sistema fornece o tempo total de preparo, facilitando o planejamento e a organização da equipe de cozinha.
 
-## Problema Proposto/Solução Proposta
+**Questões principais que o sistema resolve:**
+- **Eficiência no Atendimento**: Automatizar o processamento de pedidos, diminuindo o tempo de espera.
+- **Gestão de Estoque**: Verificar o estoque antes de processar cada pedido.
+- **Planejamento de Preparo**: Oferecer uma visão clara do tempo total de preparo dos pedidos.
 
-Este projeto foi desenvolvido para atender a um problema comum enfrentado por restaurantes: **a gestão eficiente dos pedidos e do estoque**. O sistema permite que os restaurantes processem pedidos de forma organizada e monitorem a disponibilidade dos itens no estoque, evitando atrasos no atendimento e a insatisfação dos clientes.
+**Requisitos do Sistema (Versão Recursiva)**
 
-As principais questões que o sistema busca resolver incluem:
+**Funcionais**
+- **Entrada de Dados**: O sistema deve permitir a inserção do número de pedidos, tempos de preparo dos itens e quantidades disponíveis no estoque.
+- **Processamento de Pedidos**: O sistema deve gerar e processar pedidos aleatórios a partir do menu, verificando o estoque e calculando o tempo total.
+- **Verificação e Atualização de Estoque**: O sistema deve verificar o estoque antes de processar os pedidos e atualizá-lo após cada pedido processado.
+- **Continuação de Pedidos**: O sistema deve permitir que o usuário continue processando pedidos até o esgotamento do estoque ou até que o usuário deseje parar.
 
-1. **Eficiência no Atendimento:** Automatizar o processo de recebimento e processamento de pedidos, reduzindo o tempo de espera para os clientes.
-2. **Gestão do Estoque:** Permitir que os gerentes de restaurante verifiquem rapidamente a disponibilidade dos itens, evitando vendas de produtos esgotados.
-3. **Planejamento de Preparo:** Proporcionar uma visão clara do tempo de preparo total dos pedidos, facilitando a programação da equipe de cozinha.
+**Não Funcionais**
+- **Usabilidade**: O sistema deve ser simples e fácil de usar.
+- **Desempenho**: O sistema deve ser capaz de processar pedidos rapidamente, mesmo em casos de múltiplos pedidos.
+- **Confiabilidade**: O sistema deve operar sem falhas e de forma contínua.
 
-Dessa forma, o sistema contribui para um atendimento mais ágil e eficiente, aumentando a satisfação do cliente e melhorando a operação do restaurante.
+**Resumo do Código (Versão Recursiva)**
 
+O código implementa o sistema utilizando **recursividade** para processar pedidos e verificar o estoque, ao invés de loops tradicionais. Ele é composto pelas seguintes funcionalidades:
 
+- **Entrada de Dados**: O usuário insere o número de pedidos, tempos de preparo e quantidades em estoque.
+- **Processamento de Pedidos**: Pedidos são processados aleatoriamente, e o sistema verifica a disponibilidade no estoque antes de processar cada um.
+- **Verificação e Atualização de Estoque**: O estoque é verificado antes do processamento, e atualizado após cada pedido.
+- **Processamento Recursivo**: O sistema continua processando pedidos de forma recursiva até que o estoque acabe ou o usuário decida parar.
+  
+**Fluxo do Programa**
+1. **Início**: O sistema solicita ao usuário o número de pedidos, os tempos de preparo dos itens e as quantidades no estoque.
+2. **Entrada de Dados**: O usuário insere os dados de preparo e estoque.
+3. **Processamento Recursivo**: O sistema processa pedidos recursivamente e verifica o estoque.
+4. **Verificação de Estoque**: O sistema utiliza uma função recursiva para verificar se os itens estão disponíveis.
+5. **Atualização do Estoque**: O estoque é atualizado após cada pedido.
+6. **Continuação**: O sistema pergunta se o usuário deseja continuar processando pedidos ou parar.
+7. **Cálculo do Tempo Total**: Após o término dos pedidos, o sistema calcula o tempo total de preparo recursivamente.
+8. **Fim**: O programa termina.
 
-## Requisitos do Sistema
-### Funcionais
-1. **Entrada de Dados:**
-   - O sistema deve permitir que o usuário insira o número de pedidos, os tempos de preparo dos itens do menu e as quantidades disponíveis em estoque.
-2. **Processamento de Pedidos:**
-   - O sistema deve gerar pedidos aleatórios a partir do menu e calcular o tempo total de preparo.
-3. **Verificação de Estoque:**
-   - O sistema deve verificar se os itens necessários estão disponíveis em estoque antes de processar os pedidos.
-4. **Atualização de Estoque:**
-   - O sistema deve atualizar a quantidade em estoque após cada pedido ser processado.
-5. **Continuação de Pedidos:**
-   - O sistema deve permitir que o usuário continue processando pedidos até que o estoque se esgote ou que o usuário decida parar.
+**Macro Solução**
+A solução recursiva proposta consiste nas seguintes partes principais:
 
-### Não Funcionais
-1. **Usabilidade:**
-   - O sistema deve ser intuitivo e fácil de usar para o operador.
-2. **Desempenho:**
-   - O sistema deve processar pedidos rapidamente, mesmo com múltiplos pedidos em sequência.
-3. **Confiabilidade:**
-   - O sistema deve funcionar de forma consistente e correta, sem falhas que comprometam o atendimento.
+1. **Entrada de Dados**: O sistema solicita ao usuário o número de pedidos, tempos de preparo e quantidades em estoque.
+   
+2. **Funções Recursivas**:
+    - **calcular_tempo_total(pedidos)**: Utiliza recursão para calcular o tempo total de preparo dos pedidos.
+    - **verificar_estoque(estoque)**: Verifica de forma recursiva a disponibilidade de itens no estoque.
+    - **processar_pedidos_recursivo(menu, estoque, pedidos, num_pedidos)**: Processa os pedidos de forma recursiva até que o número de pedidos seja zero.
+    - **continuar_processando(estoque, menu, pedidos)**: Permite ao usuário continuar processando pedidos até o esgotamento do estoque ou até que ele decida parar.
 
-## Resumo do Código
-O código implementa um sistema de gerenciamento de pedidos utilizando Python. Ele inclui as seguintes funcionalidades:
+3. **Ferramentas Utilizadas**
+    - **Linguagem de Programação**: Python
+    - **Ferramentas**: Python 3.x, GitHub para controle de versão.
 
-1. **Entrada de Dados:** O usuário é solicitado a informar o número de pedidos, os tempos de preparo dos itens do menu e as quantidades disponíveis em estoque.
-2. **Processamento de Pedidos:** O sistema gera pedidos aleatórios, calcula o tempo de preparo total e verifica a disponibilidade dos itens no estoque.
-3. **Verificação de Estoque:** O sistema checa se os itens necessários estão disponíveis antes de processar cada pedido.
-4. **Atualização de Estoque:** Após o processamento de um pedido, o estoque é atualizado para refletir a quantidade disponível.
-5. **Repetição:** O sistema permite ao usuário continuar processando pedidos até que o estoque esgote ou o usuário decida parar.
+---
 
-## Resumo do Fluxo do Programa
-O fluxo do programa é o seguinte:
+**Evolução da Análise**
 
-1. **Início:** O programa inicia e solicita ao usuário o número de pedidos, tempos de preparo dos itens do menu e quantidades em estoque.
-2. **Entrada de Dados:** O usuário insere os tempos de preparo dos itens e as quantidades em estoque.
-3. **Processamento de Pedidos:** O programa entra em um laço onde processa os pedidos, gerando pedidos aleatórios do menu e verificando a disponibilidade dos itens no estoque.
-4. **Verificação de Estoque:** Para cada pedido, o programa verifica se o item está disponível no estoque. Se disponível, o pedido é processado; se não, o programa informa que não há itens disponíveis.
-5. **Atualização do Estoque:** O estoque é atualizado após cada pedido processado.
-6. **Continuação:** O programa pergunta ao usuário se deseja continuar processando mais pedidos. Se sim, o laço recomeça; se não, o programa termina.
-7. **Cálculo do Tempo Total:** Após o término dos pedidos, o programa calcula e exibe o tempo total de preparo dos pedidos.
-8. **Fim:** O programa finaliza.
+**Objetivos do Projeto**
+O objetivo é otimizar o atendimento em restaurantes, automatizando a gestão de pedidos e verificando o estoque de forma eficiente.
 
+**Estrutura do Código**
+A versão recursiva utiliza chamadas recursivas para processar pedidos e verificar o estoque, removendo a necessidade de loops tradicionais.
 
-## Macro Solução
-A solução proposta consiste em um sistema que possui as seguintes características:
+**Cenários de Execução**
+- **Melhor Caso**: Todos os itens estão disponíveis no estoque e o número de pedidos é pequeno. O processamento é rápido, pois os pedidos são processados imediatamente.
+- **Pior Caso**: O estoque está quase esgotado e o número de pedidos é grande. O sistema pode precisar de várias verificações de estoque antes de processar pedidos, aumentando o tempo total de execução.
 
-- **Entrada de Dados:** O sistema solicita ao usuário informações sobre o número de pedidos, tempos de preparo e quantidades em estoque dos itens do menu.
-- **Laços de Repetição:**
-  - **`for` Loop:** Utilizado para calcular o tempo total de preparo dos pedidos e para verificar a disponibilidade de itens no estoque.
-  - **`while` Loop:** Permite que o sistema continue processando pedidos até que o estoque esgote ou o usuário decida parar.
+---
 
-## Ferramentas e Linguagens Utilizadas
-- **Linguagem de Programação:** Python
-  - A escolha do Python se deve à sua simplicidade e expressividade, que facilita o desenvolvimento de soluções rápidas e eficientes.
-- **Ferramentas:**
-  - Python 3.x: Para o desenvolvimento da aplicação.
-  - GitHub: Utilizado para controle de versão e colaboração entre os membros da equipe.
+**Função Assintótica Simplificada**
+A análise assintótica do sistema recursivo é semelhante à versão com loops, mas agora o tempo de execução é descrito em termos das chamadas recursivas.
 
+**Funções Principais**
+- **calcular_tempo_total(pedidos)**: A função percorre recursivamente a lista de pedidos, somando os tempos de preparo. A complexidade é \( O(n) \), onde \( n \) é o número de pedidos.
+  
+- **verificar_estoque(estoque)**: A função percorre recursivamente o estoque até encontrar o primeiro item disponível ou até percorrer todo o estoque. A complexidade é \( O(m) \), onde \( m \) é o número de itens no estoque.
 
-# A) Evolução da Análise
+- **processar_pedidos_recursivo(menu, estoque, pedidos, num_pedidos)**: A função processa pedidos recursivamente, com complexidade \( O(k \cdot n) \) para processar os pedidos e \( O(k \cdot m) \) para verificar o estoque, onde \( k \) é o número de pedidos.
 
-## Introdução à Análise Assintótica
+**Função Assintótica Final**
+A complexidade total do sistema recursivo pode ser descrita como \( O(n + m + k \cdot (n + m)) \), onde \( n \) é o número de pedidos, \( m \) o número de itens no estoque e \( k \) o número de iterações necessárias.
 
-A análise assintótica é um método utilizado para descrever o comportamento de algoritmos em termos de tempo de execução e uso de memória à medida que a entrada cresce. Este conceito é fundamental no desenvolvimento de software eficiente.
+---
 
-## Objetivos do Projeto
+**Conclusão**
+A versão recursiva do sistema de gerenciamento de pedidos mantém a eficiência, permitindo que os pedidos sejam processados de forma ordenada e que o estoque seja atualizado corretamente. A recursão oferece uma maneira alternativa de implementar o sistema, simplificando a lógica e eliminando a necessidade de laços.
 
-O sistema de gestão de pedidos foi projetado para otimizar o atendimento ao cliente em restaurantes, processando pedidos e verificando a disponibilidade de itens no estoque.
+---
 
-## Estrutura do Código
+**Código em Python (Versão Recursiva)**
 
-O sistema utiliza iteração para processar pedidos e verificar o estoque, com laços de repetição e uma função recursiva, o que permite que o programa opere de forma eficiente e escalável.
-
-## Cenários de Execução
-
-- **Melhor Caso:** Quando há sempre itens disponíveis no estoque e o número de pedidos é pequeno, o tempo de execução é reduzido, pois o sistema rapidamente processa cada pedido.
-- **Pior Caso:** Ocorre quando o estoque está quase esgotado, exigindo várias verificações de estoque, ou quando o número de pedidos é elevado, aumentando o tempo total de processamento.
-
-## Crescimento das Funções
-
-À medida que o número de pedidos e a complexidade do menu aumentam, a análise deve considerar como a quantidade de pedidos e o tamanho do estoque afetam o desempenho do sistema.
-
-# B) Função Assintótica [Simplificação]
-
-Para simplificar a função assintótica do nosso projeto, analisaremos as partes mais críticas do código:
-
-## Funções Principais
-
-- **`calcular_tempo_total(pedidos):`** Esta função percorre todos os pedidos e calcula o tempo total.
-  - **Complexidade:** \(O(n)\), onde \(n\) é o número de pedidos.
-
-- **`verificar_estoque(estoque):`** Esta função percorre o estoque para verificar a disponibilidade de itens.
-  - **Complexidade:** \(O(m)\), onde \(m\) é o número de itens no estoque.
-
-- **`main():`** Esta função contém um laço while que continua processando pedidos até que não haja mais itens disponíveis ou o usuário decida parar.
-  - A complexidade total do laço depende do número de iterações que ele faz, que pode ser um número \(k\) de pedidos em cada iteração. Portanto, o tempo total do laço pode ser expresso como:
-  \[
-  O(k \cdot n) \text{ (para processar os pedidos)} + O(k \cdot m) \text{ (para verificar o estoque)} = O(k \cdot (n + m))
-  \]
-
-## Função Assintótica Final
-
-A complexidade total do sistema pode ser expressa como:
-\[
-O(n + m + k \cdot (n + m))
-\]
-Esta função indica que o tempo de execução do sistema aumenta linearmente com o número de pedidos e itens no estoque, e a interação entre os pedidos e as verificações de estoque.
-
-# Conclusão
-
-A análise assintótica do nosso projeto de sistema de gestão de pedidos revela que a eficiência do código é crucial para a operação em ambientes com alta demanda. O uso de funções lineares e iterações permite que o sistema mantenha um desempenho adequado, mesmo com o crescimento da quantidade de pedidos e do estoque. Essa análise ajuda a identificar pontos de melhoria e otimização para o futuro.
-
-
-
-### Código em Python
-
-```python
+```
+python
 import random
 
 def calcular_tempo_total(pedidos):
-    return sum(pedidos)
+    if len(pedidos) == 0:
+        return 0
+    return pedidos[0] + calcular_tempo_total(pedidos[1:])
 
-def verificar_estoque(estoque):
-    for i, item in enumerate(estoque):
-        if item > 0:
-            return i  # Retorna o índice do primeiro item disponível
-    return -1  # Retorna -1 se nenhum item estiver disponível
+def verificar_estoque(estoque, index=0):
+    if index >= len(estoque):
+        return -1  # Nenhum item disponível
+    if estoque[index] > 0:
+        return index  # Retorna o índice do primeiro item disponível
+    return verificar_estoque(estoque, index + 1)  # Verifica o próximo item
+
+def processar_pedidos_recursivo(menu, estoque, pedidos, num_pedidos):
+    if num_pedidos == 0:
+        return pedidos
+
+    item_index = random.randint(0, len(menu) - 1)  # Seleciona aleatoriamente um item do menu
+    if estoque[item_index] > 0:
+        pedidos.append(menu[item_index])
+        estoque[item_index] -= 1
+        print(f"Pedido processado: tempo de preparo = {menu[item_index]} minutos")
+    else:
+        print(f"Item {item_index + 1} esgotado!")
+
+    return processar_pedidos_recursivo(menu, estoque, pedidos, num_pedidos - 1)
+
+def continuar_processando(estoque, menu, pedidos):
+    if verificar_estoque(estoque) == -1:
+        print("Nenhum item disponível no estoque.")
+        return pedidos
+
+    continuar = input("Deseja continuar processando mais pedidos? (s/n): ")
+    if continuar.lower() != 's':
+        return pedidos
+
+    num_pedidos =
+
+ int(input("Digite o número de novos pedidos: "))
+    pedidos = processar_pedidos_recursivo(menu, estoque, pedidos, num_pedidos)
+
+    return continuar_processando(estoque, menu, pedidos)
 
 def main():
     random.seed()  # Inicializa o gerador de números aleatórios
@@ -159,27 +155,8 @@ def main():
     menu = [int(input(f"Digite o tempo de preparo do item {i + 1} (em minutos): ")) for i in range(5)]
     estoque = [int(input(f"Digite a quantidade em estoque do item {i + 1}: ")) for i in range(5)]
 
-    pedidos = []
-
-    while True:
-        print("\nProcessando pedidos:")
-        for _ in range(num_pedidos):
-            item_index = random.randint(0, 4)  # Seleciona aleatoriamente um item do menu
-            if estoque[item_index] > 0:  # Verifica se o item está disponível
-                pedidos.append(menu[item_index])
-                estoque[item_index] -= 1
-                print(f"Pedido processado: tempo de preparo = {menu[item_index]} minutos")
-            else:
-                print(f"Item {item_index + 1} esgotado!")
-
-        if verificar_estoque(estoque) == -1:
-            print("Nenhum item disponível no estoque.")
-            break
-
-        continuar = input("Deseja continuar processando mais pedidos? (s/n): ")
-        if continuar.lower() != 's':
-            break
-        num_pedidos = int(input("Digite o número de novos pedidos: "))
+    pedidos = processar_pedidos_recursivo(menu, estoque, [], num_pedidos)
+    pedidos = continuar_processando(estoque, menu, pedidos)
 
     total_tempo = calcular_tempo_total(pedidos)
     print(f"\nTempo total de preparo dos pedidos: {total_tempo} minutos")
@@ -187,5 +164,3 @@ def main():
 if __name__ == "__main__":
     main()
 ´´´
-
-
