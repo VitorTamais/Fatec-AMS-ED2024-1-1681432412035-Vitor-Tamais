@@ -6,7 +6,7 @@
 - Vitor Tamais Fischer
 - Giovanni Montteiro
 
-###**Descrição de Negócio**
+### **Descrição de Negócio**
 O sistema de gerenciamento de pedidos foi desenvolvido para otimizar o atendimento ao cliente em restaurantes. Ele permite que os operadores gerenciem os pedidos de forma eficiente, garantindo que os itens estejam disponíveis em estoque e calculando o tempo total de preparo de forma precisa. O sistema opera em tempo real, proporcionando uma interação contínua e eficiente.
 
 **Problema Proposto / Solução Proposta**
