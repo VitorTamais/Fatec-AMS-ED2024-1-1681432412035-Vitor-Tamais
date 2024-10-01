@@ -103,7 +103,6 @@ A versão recursiva do sistema de gerenciamento de pedidos mantém a eficiência
 ### **Código em Python (Versão Recursiva)**
 
 ```
-python
 import random
 
 def calcular_tempo_total(pedidos):
