@@ -140,9 +140,7 @@ def continuar_processando(estoque, menu, pedidos):
     if continuar.lower() != 's':
         return pedidos
 
-    num_pedidos =
-
- int(input("Digite o número de novos pedidos: "))
+    num_pedidos = int(input("Digite o número de novos pedidos: "))
     pedidos = processar_pedidos_recursivo(menu, estoque, pedidos, num_pedidos)
 
     return continuar_processando(estoque, menu, pedidos)
@@ -162,3 +160,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
